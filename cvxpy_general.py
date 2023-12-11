@@ -172,7 +172,7 @@ def get_shortest_paths(graph, start_lat, start_lon, end_lat, end_lon, c0, edge_i
     return xs
 
 
-def solve_optimization_for_diff_gamma(num_responders, xs, ys, ws, max_gamma=2):
+def solve_optimization_for_diff_gamma(num_responders, xs, ys, ws, k=3, max_gamma=120):
     three_optimal_gamma = np.zeros(max_gamma + 1)
     two_optimal_gamma = np.zeros(max_gamma + 1)
     one_optimal_gamma = np.zeros(max_gamma + 1)
@@ -402,5 +402,5 @@ if __name__ == "__main__":
         lists.sort(key=lambda x: x[0])
         xs, ys, ws = lists[0][2], lists[1][2], lists[2][2]
 
-    solve_optimization_for_diff_gamma(num_responders, xs, ys, ws)
+    solve_optimization_for_diff_gamma(num_responders, xs, ys, ws, k=k, max_gamma=120)
 
