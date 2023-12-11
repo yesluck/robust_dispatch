@@ -10,7 +10,7 @@ print(len(graph.nodes))
 print(len(graph.edges))
 
 # # Save the graph to a file
-with open("kowloon_drive_graph.pkl", "wb") as f:
+with open("kowloon_graph.pkl", "wb") as f:
     pickle.dump(graph, f)
 
 # Read the graph from the file
