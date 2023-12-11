@@ -5,7 +5,7 @@ import pickle
 # Run only on the first time
 # Get the road network of Kowloon
 place_name = "Kowloon, Hong Kong"
-graph = ox.graph_from_place(place_name, network_type='drive')
+graph = ox.graph_from_place(place_name, network_type='walk')
 print(len(graph.nodes))
 print(len(graph.edges))
 
